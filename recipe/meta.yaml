@@ -22,9 +22,9 @@ requirements:
     - pip
   run:
     - python >=3.10
-    - gwpopulation
     - numpy
     - scipy
+    - astropy
 
 test:
   imports:
@@ -32,8 +32,10 @@ test:
     - wcosmo.utils
   commands:
     - pip check
+    - python -m pytest --pyargs wcosmo.test
   requires:
     - pip
+    - gwpopulation >=1
 
 about:
   home: https://github.com/ColmTalbot/wcosmo
