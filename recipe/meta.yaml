@@ -26,6 +26,8 @@ requirements:
     - numpy
     - scipy
     - astropy-base
+    - array-api-compat
+    - plum-dispatch
 
 test:
   imports:
