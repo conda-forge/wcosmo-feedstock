@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wcosmo-{{ version }}.tar.gz
-  sha256: 9efaf2e6b2cf5aa3a9f3cb9631f04d32f59e242805ed36c76237f4f4fc916d94
+  sha256: 8d67aad37ec5b69f58d1fa1fcec9033b5d78b82d38bbf78c607ede30b665dce0
 
 build:
   noarch: python
