@@ -1,13 +1,14 @@
 {% set name = "wcosmo" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wcosmo-{{ version }}.tar.gz
-  sha256: 72ee7be051d68ba33b7ee888d6d3a86ecf9a53e743c5354f8c7e1024502c3ebc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wcosmo-{{ version }}.tar.gz
+  sha256: 8d67aad37ec5b69f58d1fa1fcec9033b5d78b82d38bbf78c607ede30b665dce0
 
 build:
   noarch: python
@@ -16,15 +17,17 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - scipy
-    - astropy
+    - astropy-base
+    - array-api-compat
+    - plum-dispatch
 
 test:
   imports:
@@ -34,9 +37,9 @@ test:
     - pip check
     - python -m pytest --pyargs wcosmo.test
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
-    - gwpopulation >=1
 
 about:
   home: https://github.com/ColmTalbot/wcosmo
