@@ -1,5 +1,5 @@
 {% set name = "wcosmo" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wcosmo-{{ version }}.tar.gz
-  sha256: eb8c671630979f60a0d451cd886efa5e2dc6e56f72265e6004ffa03d9e86eeca
+  sha256: 367a4dc1b72f516e2ec26630c51dfc8742a1e47fc078ddcd6f550722ed19a3d4
 
 build:
   noarch: python
